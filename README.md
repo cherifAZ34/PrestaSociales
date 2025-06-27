@@ -1,63 +1,97 @@
-# 🛡️ Contrôle Automatisé des Arrêts de Travail
-Cycle-Innovation
 
-1. Description du Projet
-📌 Objectif
+# 🛡️ Contrôle Automatisé des Arrêts de Travail – Projet INNOV
 
-Ce projet vise à détecter automatiquement les fraudes potentielles dans les arrêts de travail, en croisant les informations issues des documents médicaux avec des bases de données (SS, cabinet médical, etc.). Il fait suite aux constats de la Cour des comptes sur les milliards d’euros de fraudes constatées chaque année.
-🎯 Fonctionnalités
-- Vérification automatique des champs du formulaire Cerfa :
-  - Identité du médecin ↔ numéro RPPS ↔ adresse ↔ structure
-  - Numéro de sécurité sociale ↔ nom/prénom du patient
-  - Adresse de domicile ↔ lieu d’auscultation
-  - Détection de diagnostic imprécis
-- Alerte en cas d’anomalie vers les agents de l’assurance maladie
+## 🎯 Objectif du projet
 
+Selon le **rapport 2023 de la Cour des comptes**, entre **6 à 8 milliards d’euros de fraudes** aux prestations sociales sont constatées chaque année, et seulement **1,6 milliard est recouvré** par l’État.
 
-🛠️ Technologies utilisées:
-    .React + TypeScript
-    .Vite
-    .Tailwind CSS
-    .ESLint
+👉 Ce projet propose la création d’une **application web de contrôle automatisé** de certains documents de santé, en particulier les **avis d'arrêt de travail**, afin de faciliter le travail des agents de l’Assurance Maladie et lutter contre les fraudes.
 
-📁 Architecture :
-    src/components – Modales et composants principaux
-    utils/ – Fonctions utilitaires
-    App.tsx – Composant principal
-    main.tsx – Point d’entrée
+## 🧠 Types de fraudes ciblées et solutions proposées
 
-2. Structure du Projet
-   /src
-  ├─ components/             # Composants React (AlertModal, AnalysisResults...)
-  ├─ utils/                  # Fonctions utilitaires
-  ├─ App.tsx                 # Composant principal
-  ├─ main.tsx                # Point d'entrée React
-  ├─ types.ts                # Types TypeScript
-  ├─ index.css               # Style global
-  └─ vite-env.d.ts           # Types Vite
+### 📌 Constat actuel :
+- Contrôles manuels très limités, souvent aléatoires.
+- Des fraudes passent entre les mailles du filet.
 
-index.html                  # Template HTML
-tailwind.config.js          # Config Tailwind
-vite.config.ts              # Config Vite
-tsconfig.json               # Config TypeScript
-eslint.config.js            # Linter
+### ✅ Notre solution :
+- Vérification automatique de **plusieurs champs du formulaire Cerfa** :
+  - Correspondance entre **l’identité du médecin**, son numéro RPPS, l’adresse de son cabinet et la structure.
+  - Concordance entre **le NIR (numéro de sécurité sociale)** et **le nom/prénom du patient**.
+  - **Cohérence géographique** entre le domicile du patient et le lieu d’auscultation.
+  - **Alertes** sur les diagnostics imprécis.
 
+### 📩 En cas d'anomalie détectée :
+- Envoi d’une **notification aux agents** de l’Assurance Maladie pour contrôle approfondi.
 
-🚀 3. Comment lancer le projet en local
+## 🧪 Méthodologie proposée
 
-Prérequis :
-- Node.js ≥ 18
--  npm ≥ 9
+1. Enquête terrain auprès des caisses d'assurance maladie.
+2. Analyse des processus de contrôle existants.
+3. Développement d’un algorithme de contrôle automatique.
+4. Mise en place des conditions légales d’exploitation des données sensibles.
+5. Déploiement d’une **architecture logicielle simple et réplicable**.
+6. **Tests en conditions réelles** dans des caisses pilotes.
+7. Améliorations, puis **commercialisation** si validation.
 
-Etapes: 
-# 1. Cloner le repo
-git clone https://github.com/TON-UTILISATEUR/TON-NOM-DE-REPO.git
-cd TON-NOM-DE-REPO
+## 🛠️ Stack technique
 
-# 2. Installer les dépendances
+- **React** + **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **ESLint**
+
+## ⚙️ Structure du projet
+
+```
+INNOV1.3.1/
+├── src/
+│   ├── components/
+│   │   ├── AlertModal.tsx
+│   │   ├── AnalysisResults.tsx
+│   │   └── HistoryModal.tsx
+│   ├── utils/
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   ├── types.ts
+│   └── vite-env.d.ts
+├── .bolt/
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.ts
+├── tsconfig.app.json
+├── tsconfig.json
+├── eslint.config.js
+└── README.md
+```
+
+## 🚀 Comment exécuter le projet localement
+
+### ✅ Prérequis
+
+- **Node.js** ≥ 18.x
+- **npm** ≥ 9.x
+
+### 📦 Étapes
+
+```bash
+git clone https://github.com/VOTRE-UTILISATEUR/NOM-DU-REPO.git
+cd NOM-DU-REPO
 npm install
-
-# 3. Lancer le serveur de développement
 npm run dev
+```
 
-Ensuite, ouvre le lien affiché dans ton terminal (souvent http://localhost:5173) pour voir l'application
+👉 Accès local : [http://localhost:5173](http://localhost:5173)
+
+## 📌 Statut du projet
+
+- ✅ Architecture technique définie
+- ✅ Premiers composants et maquettes créés
+- 🧪 En attente de tests avec des données réelles
+- 🚧 Phase de validation juridique sur l’exploitation des données
+
+## 📜 Licence
+
+Projet réalisé dans un cadre de **recherche et innovation**.  
+Toute utilisation des données sensibles doit respecter le RGPD et les régulations en vigueur.
