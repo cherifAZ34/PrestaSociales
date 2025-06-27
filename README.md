@@ -76,7 +76,7 @@ INNOV1.3.1/
 ### 📦 Étapes
 
 ```bash
-git clone https://github.com/VOTRE-UTILISATEUR/NOM-DU-REPO.git
+git clone https://github.com/cherifAZ34/PrestaSociales.git
 cd NOM-DU-REPO
 npm install
 npm run dev
